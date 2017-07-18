@@ -1,8 +1,10 @@
 archetype (adl_version=1.4)
+    openEHR-EHR-OBSERVATION.blood_pressure-fabio.v1
+specialize
     openEHR-EHR-OBSERVATION.blood_pressure.v1
 
 concept
-    [at0000]
+    [at0000.1]
 
 language
     original_language = <[ISO_639-1::en]>
@@ -13,12 +15,16 @@ language
                 ["name"] = <"Sebastian Garde, Jasmin Buck">
                 ["organisation"] = <"Ocean Informatics, University of Heidelberg">
             >
+            other_details = <
+            >
         >
         ["ru"] = <
             language = <[ISO_639-1::ru]>
             author = <
                 ["name"] = <"Igor Lizunov">
                 ["email"] = <"i.lizunov@infinnity.ru">
+            >
+            other_details = <
             >
         >
         ["nb"] = <
@@ -27,6 +33,8 @@ language
                 ["name"] = <"Heather Leslie (from a Norwegian archetype)">
                 ["organisation"] = <"Ocean Informatics, Australia and Nasjonal IKT, Norway">
                 ["email"] = <"heather.leslie@oceaninformatics.com">
+            >
+            other_details = <
             >
         >
         ["ko"] = <
@@ -37,6 +45,8 @@ language
                 ["email"] = <"seungjong.yu@gmail.com">
             >
             accreditation = <"Certified Board of Family Medicine in South Korea">
+            other_details = <
+            >
         >
         ["es-ar"] = <
             language = <[ISO_639-1::es-ar]>
@@ -46,6 +56,8 @@ language
                 ["email"] = <"domingo_liotta@hotmail.com">
             >
             accreditation = <"Universidad de Morón">
+            other_details = <
+            >
         >
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
@@ -55,6 +67,8 @@ language
                 ["email"] = <"jussara.macedo@gmail.com">
             >
             accreditation = <"Medical Doctor, Psychiarist, Clinical Modeller, openEHR Diretor, ehealth infostructuture WG ccoordinator- brazilian  ehealth program">
+            other_details = <
+            >
         >
         ["ja"] = <
             language = <[ISO_639-1::ja]>
@@ -63,11 +77,15 @@ language
                 ["organisation"] = <"Kyoto University">
                 ["email"] = <"skoba@moss.gr.jp">
             >
+            other_details = <
+            >
         >
         ["ar-sy"] = <
             language = <[ISO_639-1::ar-sy]>
             author = <
                 ["name"] = <"Mona Saleh">
+            >
+            other_details = <
             >
         >
         ["fa"] = <
@@ -77,6 +95,8 @@ language
                 ["organisation"] = <"Ocean Informatics">
                 ["email"] = <"shahla.foozonkhah@oceaninformatics.com">
             >
+            other_details = <
+            >
         >
         ["zh-cn"] = <
             language = <[ISO_639-1::zh-cn]>
@@ -84,6 +104,8 @@ language
                 ["name"] = <"Chunlan Ma; Lin Zhang">
                 ["organisation"] = <"Ocean Informatics; BIPH">
                 ["email"] = <"chunlan.ma@oceaninformatics.com; linforest@163.com">
+            >
+            other_details = <
             >
         >
         ["es"] = <
@@ -93,6 +115,8 @@ language
                 ["organisation"] = <"CaboLabs">
             >
             accreditation = <"Computer Engineer">
+            other_details = <
+            >
         >
         ["nl"] = <
             language = <[ISO_639-1::nl]>
@@ -100,6 +124,8 @@ language
                 ["name"] = <"Marja Buur">
                 ["organisation"] = <"M.C.A.">
                 ["email"] = <"m.buur-krom@mca.nl">
+            >
+            other_details = <
             >
         >
     >
@@ -305,7 +331,7 @@ Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Hum
     >
 
 definition
-    OBSERVATION[at0000] matches {
+    OBSERVATION[at0000.1] matches {
         data matches {
             HISTORY[at0001] matches {
                 events existence matches {0..1} cardinality matches {1..*; unordered} matches {
@@ -374,13 +400,18 @@ definition
                                             DV_TEXT matches {*}
                                         }
                                     }
+                                    ELEMENT[at0.1] occurrences matches {0..1} matches {
+                                        value existence matches {0..1} matches {
+                                            DV_TEXT occurrences matches {0..1} matches {*}
+                                        }
+                                    }
                                 }
                             }
                         }
                         state existence matches {0..1} matches {
                             ITEM_TREE[at0007] matches {
                                 items existence matches {0..1} cardinality matches {0..*; unordered} matches {
-                                    ELEMENT[at0008] occurrences matches {0..1} matches {
+                                    ELEMENT[at0008.1] occurrences matches {0..1} matches {
                                         value existence matches {0..1} matches {
                                             DV_CODED_TEXT matches {
                                                 defining_code matches {
@@ -578,11 +609,6 @@ ontology
     term_definitions = <
         ["en"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Blood Pressure">
-                    description = <"The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
-
-                >
                 ["at0001"] = <
                     text = <"history">
                     description = <"History Structural node.">
@@ -611,11 +637,6 @@ ontology
                 ["at0007"] = <
                     text = <"state structure">
                     description = <"@ internal @">
-
-                >
-                ["at0008"] = <
-                    text = <"Position">
-                    description = <"The position of the subject at the time of measurement.">
 
                 >
                 ["at0011"] = <
@@ -677,21 +698,29 @@ ontology
                 ["at1000"] = <
                     text = <"Standing">
                     description = <"Standing at the time of blood pressure measurement.">
+                    isFromParent = <"true">
+                    selected = <"true">
 
                 >
                 ["at1001"] = <
                     text = <"Sitting">
                     description = <"Sitting (for example on bed or chair) at the time of blood pressure measurement.">
+                    isFromParent = <"true">
+                    selected = <"true">
 
                 >
                 ["at1002"] = <
                     text = <"Reclining">
                     description = <"Reclining at the time of blood pressure measurement.">
+                    isFromParent = <"true">
+                    selected = <"true">
 
                 >
                 ["at1003"] = <
                     text = <"Lying">
                     description = <"Lying flat at the time of blood pressure measurement.">
+                    isFromParent = <"true">
+                    selected = <"true">
 
                 >
                 ["at1005"] = <
@@ -738,6 +767,8 @@ ontology
                 ["at1014"] = <
                     text = <"Lying with tilt to left">
                     description = <"Lying flat with some lateral tilt, usually angled towards the left side.   Commonly required in the last trimester of pregnancy to relieve aortocaval compression.">
+                    isFromParent = <"true">
+                    selected = <"true">
 
                 >
                 ["at1018"] = <
@@ -890,15 +921,24 @@ ontology
                     text = <"Angle, plane">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Blood Pressure">
+                    description = <"The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Position">
+                    description = <"The position of the subject at the time of measurement.">
+
+                >
+                ["at0.1"] = <
+                    text = <"DV_TEXT">
+
+                >
             >
         >
         ["ja"] = <
             items = <
-                ["at0000"] = <
-                    text = <"血圧">
-                    description = <"全身に循環する動脈圧を示すものとして，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
-
-                >
                 ["at0001"] = <
                     text = <"history">
                     description = <"history 構造ノード">
@@ -927,11 +967,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"体位">
-                    description = <"計測のときの対象者の体位">
 
                 >
                 ["at0011"] = <
@@ -1206,15 +1241,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"血圧">
+                    description = <"全身に循環する動脈圧を示すものとして，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
+
+                >
+                ["at0008.1"] = <
+                    text = <"体位">
+                    description = <"計測のときの対象者の体位">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["de"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Blutdruck">
-                    description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
-
-                >
                 ["at0001"] = <
                     text = <"Historie">
                     description = <"Historie">
@@ -1243,11 +1287,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"Position">
-                    description = <"Die Position der untersuchten Person während der Messung.">
 
                 >
                 ["at0011"] = <
@@ -1522,15 +1561,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Blutdruck">
+                    description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Position">
+                    description = <"Die Position der untersuchten Person während der Messung.">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["zh-cn"] = <
             items = <
-                ["at0000"] = <
-                    text = <"血压">
-                    description = <"代表体循环动脉压的动脉血压的局部测量。最为常见的情况就是，采用“血压”一词来表示上臂肱动脉血压的测量。">
-
-                >
                 ["at0001"] = <
                     text = <"历史">
                     description = <"历史结构节点">
@@ -1559,11 +1607,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"体位">
-                    description = <"测量时受检对象的体位或者说身体姿势。">
 
                 >
                 ["at0011"] = <
@@ -1838,15 +1881,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"血压">
+                    description = <"代表体循环动脉压的动脉血压的局部测量。最为常见的情况就是，采用“血压”一词来表示上臂肱动脉血压的测量。">
+
+                >
+                ["at0008.1"] = <
+                    text = <"体位">
+                    description = <"测量时受检对象的体位或者说身体姿势。">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["nl"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Bloeddruk">
-                    description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
-
-                >
                 ["at0001"] = <
                     text = <"Geschiedenis">
                     description = <"Gestructureerde geschiedenismap">
@@ -1875,11 +1927,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"Houding">
-                    description = <"De houding van het individu op het moment van de meting">
 
                 >
                 ["at0011"] = <
@@ -2154,16 +2201,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Bloeddruk">
+                    description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Houding">
+                    description = <"De houding van het individu op het moment van de meting">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["ru"] = <
             items = <
-                ["at0000"] = <
-                    text = <"АД">
-                    description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.
-">
-
-                >
                 ["at0001"] = <
                     text = <"*history(en)">
                     description = <"*history Structural node(en)">
@@ -2192,11 +2247,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"Поза">
-                    description = <"Поза пациента во время измерения давления.">
 
                 >
                 ["at0011"] = <
@@ -2470,16 +2520,25 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"АД">
+                    description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.
+">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Поза">
+                    description = <"Поза пациента во время измерения давления.">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["fa"] = <
             items = <
-                ["at0000"] = <
-                    text = <"فشار خون">
-                    description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.
-معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
-
-                >
                 ["at0001"] = <
                     text = <"تاریخچه">
                     description = <"گره ساختاری تاریخچه ">
@@ -2508,11 +2567,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"موقعیت">
-                    description = <"موقعیت فرد در زمان اندازه گیری ">
 
                 >
                 ["at0011"] = <
@@ -2786,16 +2840,25 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"فشار خون">
+                    description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.
+معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+
+                >
+                ["at0008.1"] = <
+                    text = <"موقعیت">
+                    description = <"موقعیت فرد در زمان اندازه گیری ">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["ar-sy"] = <
             items = <
-                ["at0000"] = <
-                    text = <"ضغط الدم">
-                    description = <"قياس موضعي لضغط الدم الشرياني و الذي يحل محل الضغط الشرياني في الدورة الدموية الجهازية. 
-و عادة ما يستخدم مصطلح \"ضغط الدم\" لللإشارة إلى قياس ضغط دم الشريان العضُدي في أعلى الذراع.">
-
-                >
                 ["at0001"] = <
                     text = <"التاريخ">
                     description = <"العقدة التركيبية للتاريخ">
@@ -2824,11 +2887,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"الموضع">
-                    description = <"موضع الشخص في وقت القياس">
 
                 >
                 ["at0011"] = <
@@ -3103,15 +3161,25 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"ضغط الدم">
+                    description = <"قياس موضعي لضغط الدم الشرياني و الذي يحل محل الضغط الشرياني في الدورة الدموية الجهازية. 
+و عادة ما يستخدم مصطلح \"ضغط الدم\" لللإشارة إلى قياس ضغط دم الشريان العضُدي في أعلى الذراع.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"الموضع">
+                    description = <"موضع الشخص في وقت القياس">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["es-ar"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Presión Arterial">
-                    description = <"La medición local de la tensión arterial que deriva de la medida de la presión arterial en la circulación sistémica. Comúnmente el uso de 'presión arterial' se refiere a la medida de la presión de la arteria braquial por encima del pliegue del codo.">
-
-                >
                 ["at0001"] = <
                     text = <"historia">
                     description = <"historia Nodo estructural">
@@ -3140,11 +3208,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"Posición">
-                    description = <"La posición del individuo en el momento del registro.">
 
                 >
                 ["at0011"] = <
@@ -3419,15 +3482,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Presión Arterial">
+                    description = <"La medición local de la tensión arterial que deriva de la medida de la presión arterial en la circulación sistémica. Comúnmente el uso de 'presión arterial' se refiere a la medida de la presión de la arteria braquial por encima del pliegue del codo.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Posición">
+                    description = <"La posición del individuo en el momento del registro.">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["pt-br"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Pressão Arterial">
-                    description = <"A medida local da pressão sanguínea arterial, a qual é uma substituta da pressão arterial na circulação arterial sistêmica. Mais comumente o uso do termo pressão arterial se refere à medida da pressão da artéria braquial no antebraço.">
-
-                >
                 ["at0001"] = <
                     text = <"história">
                     description = <"nodo Estrutural história">
@@ -3456,11 +3528,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"Posição">
-                    description = <"A posição do sujeito na hora da medida.">
 
                 >
                 ["at0011"] = <
@@ -3735,15 +3802,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Pressão Arterial">
+                    description = <"A medida local da pressão sanguínea arterial, a qual é uma substituta da pressão arterial na circulação arterial sistêmica. Mais comumente o uso do termo pressão arterial se refere à medida da pressão da artéria braquial no antebraço.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Posição">
+                    description = <"A posição do sujeito na hora da medida.">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["ko"] = <
             items = <
-                ["at0000"] = <
-                    text = <"혈압">
-                    description = <"체순환에서 동맥압을 대신하는 동맥혈압의 국소 측정. 보통은 '혈압'이라는 용어의 사용은 상완에서 상완동맥의 측정을 의미함.">
-
-                >
                 ["at0001"] = <
                     text = <"*history(en)">
                     description = <"*History Structural node.(en)">
@@ -3772,11 +3848,6 @@ ontology
                 ["at0007"] = <
                     text = <"*state structure(en)">
                     description = <"*@ internal @(en)">
-
-                >
-                ["at0008"] = <
-                    text = <"자세">
-                    description = <"측정 시에 대상의 자세">
 
                 >
                 ["at0011"] = <
@@ -4052,15 +4123,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"혈압">
+                    description = <"체순환에서 동맥압을 대신하는 동맥혈압의 국소 측정. 보통은 '혈압'이라는 용어의 사용은 상완에서 상완동맥의 측정을 의미함.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"자세">
+                    description = <"측정 시에 대상의 자세">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["es"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Presión arterial">
-                    description = <"Medida de la presión arterial">
-
-                >
                 ["at0001"] = <
                     text = <"*history(en)">
                     description = <"*History Structural node.(en)">
@@ -4089,11 +4169,6 @@ ontology
                 ["at0007"] = <
                     text = <"state structure">
                     description = <"@ internal @">
-
-                >
-                ["at0008"] = <
-                    text = <"Posición">
-                    description = <"Posición del paciente en el momento de la medida">
 
                 >
                 ["at0011"] = <
@@ -4368,15 +4443,24 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Presión arterial">
+                    description = <"Medida de la presión arterial">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Posición">
+                    description = <"Posición del paciente en el momento de la medida">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
             >
         >
         ["nb"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Blodtrykk">
-                    description = <"Måling av blodtrykket som uttrykk for det arterielle blodtrykk i det systemiske kretsløp.">
-
-                >
                 ["at0001"] = <
                     text = <"*history(en)">
                     description = <"*History Structural node.(en)">
@@ -4405,11 +4489,6 @@ ontology
                 ["at0007"] = <
                     text = <"state structure">
                     description = <"@ internal @">
-
-                >
-                ["at0008"] = <
-                    text = <"Stilling">
-                    description = <"Individets posisjon ved tidspunktet for målingen.">
 
                 >
                 ["at0011"] = <
@@ -4681,16 +4760,84 @@ ontology
                     text = <"*Angle, plane(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Blodtrykk">
+                    description = <"Måling av blodtrykket som uttrykk for det arterielle blodtrykk i det systemiske kretsløp.">
+
+                >
+                ["at0008.1"] = <
+                    text = <"Stilling">
+                    description = <"Individets posisjon ved tidspunktet for målingen.">
+
+                >
+                ["at0.1"] = <
+                    text = <"*DV_TEXT (en)">
+
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+        ["en"] = <
+            items = <
+            >
+        >
+        ["ja"] = <
+            items = <
+            >
+        >
+        ["de"] = <
+            items = <
+            >
+        >
+        ["zh-cn"] = <
+            items = <
+            >
+        >
+        ["nl"] = <
+            items = <
+            >
+        >
+        ["ru"] = <
+            items = <
+            >
+        >
+        ["fa"] = <
+            items = <
+            >
+        >
+        ["ar-sy"] = <
+            items = <
+            >
+        >
+        ["es-ar"] = <
+            items = <
+            >
+        >
+        ["pt-br"] = <
+            items = <
+            >
+        >
+        ["ko"] = <
+            items = <
+            >
+        >
+        ["es"] = <
+            items = <
+            >
+        >
+        ["nb"] = <
+            items = <
             >
         >
     >
     term_binding = <
         ["SNOMED-CT"] = <
             items = <
-                ["at0000"] = <[SNOMED-CT(2003)::163020007]>
                 ["at0004"] = <[SNOMED-CT(2003)::163030003]>
                 ["at0005"] = <[SNOMED-CT(2003)::163031004]>
                 ["at0013"] = <[SNOMED-CT(2003)::246153002]>
+                ["at0000.1"] = <[SNOMED-CT(2003)::163020007]>
             >
         >
         ["openehr"] = <
