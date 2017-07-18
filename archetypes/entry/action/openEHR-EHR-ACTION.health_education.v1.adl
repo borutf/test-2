@@ -1,0 +1,335 @@
+archetype (adl_version=1.4)
+    openEHR-EHR-ACTION.health_education.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2011-05-24">
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+    >
+    lifecycle_state = <"AuthorDraft">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record details about health education material provided to the subject.">
+            keywords = <"information","education">
+            copyright = <"© openEHR Foundation">
+            use = <"Use to record details about health education intervention, such as advice or physical material, provided to the subject, including links to the information itself. For example, a record of fact sheets provided to the patient about the risks of a vasectomy.">
+            misuse = <"Not to be used to record consent - for example consent to a vasectomy after provision of a fact sheet about vasectomy.">
+        >
+    >
+    other_details = <
+        ["references"] = <"Health Education (ACTION), draft archetype, NEHTA Clinical Knowledge Manager [Internet]. Sydney: National eHealth Transition Authority. Authored: 24May 2011. Available at: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.1005_2 (accessed 26 Feb 2013).">
+        ["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+        ["MD5-CAM-1.0.1"] = <"41FABA666F88DB81EBB0D143689C1D98">
+    >
+
+definition
+    ACTION[at0000] matches {
+        ism_transition matches {
+            ISM_TRANSITION[at0006] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::526]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0006]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0018] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::526]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0018]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0014] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::527]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0014]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0015] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::528]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0015]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0007] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::529]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0007]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0008] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0008]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0017] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::530]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0017]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0016] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::531]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0016]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0013] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::532]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0013]
+                        }
+                    }
+                }
+            }
+        }
+        description matches {
+            ITEM_TREE[at0001] matches {
+                items existence matches {0..1} cardinality matches {1..*; unordered} matches {
+                    ELEMENT[at0002] matches {
+                        value existence matches {0..1} matches {
+                            DV_TEXT matches {*}
+                        }
+                    }
+                    ELEMENT[at0003] occurrences matches {0..1} matches {
+                        value existence matches {0..1} matches {
+                            DV_TEXT matches {*}
+                        }
+                    }
+                    ELEMENT[at0004] occurrences matches {0..1} matches {
+                        value existence matches {0..1} matches {
+                            DV_TEXT matches {*}
+                        }
+                    }
+                    ELEMENT[at0012] occurrences matches {0..*} matches {
+                        value existence matches {0..1} matches {
+                            DV_TEXT matches {*}
+                        }
+                    }
+                    ELEMENT[at0005] occurrences matches {0..*} matches {
+                        value existence matches {0..1} matches {
+                            DV_URI matches {*}
+                        }
+                    }
+                    ELEMENT[at0020] occurrences matches {0..1} matches {
+                        value existence matches {0..1} matches {
+                            DV_COUNT matches {*}
+                        }
+                    }
+                    ELEMENT[at0010] occurrences matches {0..1} matches {
+                        value existence matches {0..1} matches {
+                            DV_TEXT matches {*}
+                        }
+                    }
+                    ELEMENT[at0019] occurrences matches {0..1} matches {
+                        value existence matches {0..1} matches {
+                            DV_TEXT matches {*}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    terminologies_available = <"en", ...>
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Health Education">
+                    description = <"Health education information provided or imparted to the subject.">
+
+                >
+                ["at0001"] = <
+                    text = <"Tree">
+                    description = <"@ internal @">
+
+                >
+                ["at0002"] = <
+                    text = <"Topic">
+                    description = <"Topic of health education information provided.">
+
+                >
+                ["at0003"] = <
+                    text = <"Description">
+                    description = <"Narrative description of the health education information provided.">
+
+                >
+                ["at0004"] = <
+                    text = <"Method">
+                    description = <"Method by which the health education information was provided.">
+                    comment = <"For example, verbal or written. This is not the same as participation. Material can be exchanged between an educator and a subject in various ways during a face-to-face consultation or via teleconference. In specific situations it may be important to document that writtern fact sheets have been physically handed to the subject, for example regarding the risks of vasectomy.">
+
+                >
+                ["at0005"] = <
+                    text = <"Link">
+                    description = <"Internet link to the information provided.">
+
+                >
+                ["at0006"] = <
+                    text = <"Education planned">
+                    description = <"Exchange of information planned.">
+
+                >
+                ["at0007"] = <
+                    text = <"Education scheduled">
+                    description = <"Appointment for education scheduled.">
+
+                >
+                ["at0008"] = <
+                    text = <"Education provided">
+                    description = <"Education session or material provided.">
+
+                >
+                ["at0010"] = <
+                    text = <"Reason">
+                    description = <"Reason for the activity.">
+                    comment = <"For example: reason why the information exchange is planned; or why the exchange was not successful.">
+
+                >
+                ["at0012"] = <
+                    text = <"Identification">
+                    description = <"Title or identifier of health education information provided.">
+
+                >
+                ["at0013"] = <
+                    text = <"Education completed">
+                    description = <"All planned activities for education have been successfully completed.">
+
+                >
+                ["at0014"] = <
+                    text = <"Education postponed">
+                    description = <"Planned education postponed prior to commencement.">
+
+                >
+                ["at0015"] = <
+                    text = <"Education cancelled">
+                    description = <"Planned education was cancelled prior to commencement.">
+
+                >
+                ["at0016"] = <
+                    text = <"Education not completed">
+                    description = <"Education session was abandoned before complete.">
+
+                >
+                ["at0017"] = <
+                    text = <"Education suspended">
+                    description = <"Planned education sessions were suspended after commencement.">
+
+                >
+                ["at0018"] = <
+                    text = <"Education Recommended">
+                    description = <"Education session has been recommended.">
+
+                >
+                ["at0019"] = <
+                    text = <"Outcome">
+                    description = <"Subjective, narrative assessment of outcome of the health education intervention.">
+                    comment = <"For example: a narrative description about patient understanding.">
+
+                >
+                ["at0020"] = <
+                    text = <"Session Number">
+                    description = <"Number of the education session in an multi-session course.">
+
+                >
+            >
+        >
+    >
