@@ -830,6 +830,90 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "INTERVAL_EVENT",
+              "nodeId" : "at1042",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "math_function",
+                "multiple" : false,
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "existence" : "1..1",
+                    "multiple" : false,
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "146" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "width",
+                "multiple" : false,
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "existence" : "1..1",
+                    "multiple" : false,
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT24H",
+                        "upper" : "PT24H",
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : false,
+                        "lowerIncluded" : true,
+                        "upperIncluded" : true
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "multiple" : false,
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003.3",
+                  "targetPath" : "/data[at0001]/events[at0006]/data[at0003.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "multiple" : false,
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0007.3",
+                  "targetPath" : "/data[at0001]/events[at0006]/state[at0007.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -871,6 +955,18 @@
             "code" : "at0007.2",
             "text" : "state structure",
             "description" : "@ internal @"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "blood pressure",
+            "description" : "@ internal @"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "state structure",
+            "description" : "@ internal @"
           }
         },
         "ja" : {
@@ -901,6 +997,18 @@
           "at0007.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.2",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "血圧",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
           }
@@ -935,6 +1043,18 @@
             "code" : "at0007.2",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "Blutdruck",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
           }
         },
         "zh-cn" : {
@@ -965,6 +1085,18 @@
           "at0007.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.2",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "血压",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
           }
@@ -999,6 +1131,18 @@
             "code" : "at0007.2",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
           }
         },
         "ru" : {
@@ -1029,6 +1173,18 @@
           "at0007.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.2",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
           }
@@ -1063,6 +1219,18 @@
             "code" : "at0007.2",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
           }
         },
         "ar-sy" : {
@@ -1093,6 +1261,18 @@
           "at0007.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.2",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
           }
@@ -1127,6 +1307,18 @@
             "code" : "at0007.2",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
           }
         },
         "pt-br" : {
@@ -1157,6 +1349,18 @@
           "at0007.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.2",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
           }
@@ -1191,6 +1395,18 @@
             "code" : "at0007.2",
             "text" : "*state structure(en)",
             "description" : "*@ internal @(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "*blood pressure(en)",
+            "description" : "*@ internal @(en)"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "*state structure(en)",
+            "description" : "*@ internal @(en)"
           }
         },
         "es" : {
@@ -1223,6 +1439,18 @@
             "code" : "at0007.2",
             "text" : "state structure",
             "description" : "@ internal @"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "blood pressure",
+            "description" : "@ internal @"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
+            "text" : "state structure",
+            "description" : "@ internal @"
           }
         },
         "nb" : {
@@ -1253,6 +1481,18 @@
           "at0007.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0007.2",
+            "text" : "state structure",
+            "description" : "@ internal @"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "blood pressure",
+            "description" : "@ internal @"
+          },
+          "at0007.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.3",
             "text" : "state structure",
             "description" : "@ internal @"
           }
