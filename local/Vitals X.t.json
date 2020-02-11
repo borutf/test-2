@@ -1,0 +1,1173 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "6d49d36b-0fcc-45ca-b680-91db2035d707",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2020-02-11"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "d18d9fb9e723f67260f207b7ca910a8b"
+    },
+    "details" : {
+      "es-ar" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es-ar"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ko" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ko"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ar-sy" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ar-sy"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.encounter.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.encounter.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0.2",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-blood_pressure-fabio-001.v1",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "ar-sy" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Vitals X",
+          "description" : "*Interaction, contact or care event between a subject of care and healthcare provider(s).(en)"
+        }
+      },
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Vitals X",
+          "description" : "Interaction, contact or care event between a subject of care and healthcare provider(s)."
+        }
+      },
+      "es-ar" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Vitals X",
+          "description" : "Interacción, contacto o evento de cuidados entre un sujeto de cuidados y uno o más proveedores de cuidados de la salud."
+        }
+      },
+      "ko" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Vitals X",
+          "description" : "*Interaction, contact or care event between a subject of care and healthcare provider(s).(en)"
+        }
+      },
+      "pt-br" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Vitals X",
+          "description" : "Interação, contato ou cuidado entre o sujeito do cuidado e profissional(is) de saúde."
+        }
+      },
+      "es" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Vitals X",
+          "description" : "Interacción, contacto o evento de cuidado entre un paciente y un proveedor de salud."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "rmName" : "openehr",
+  "rmRelease" : "1.0.3",
+  "generated" : true,
+  "templateId" : "Vitals X",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b010f448-c015-4818-a276-3423d2d72c57",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "0B794FDD7E013E64D0E7A004C0E71F0D"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.blood_pressure-fabio.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-blood_pressure-fabio-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0006",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003.0.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0007.0.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "INTERVAL_EVENT",
+              "nodeId" : "at1042",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "math_function",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "146" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "width",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT24H",
+                        "upper" : "PT24H",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : true,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : false
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003.0.2",
+                  "targetPath" : "/data[at0001]/events[at0006]/data[at0003.0.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0007.0.2",
+                  "targetPath" : "/data[at0001]/events[at0006]/state[at0007.0.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000.1",
+      "termDefinitions" : {
+        "en" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Standing",
+            "description" : "Standing at the time of blood pressure measurement.",
+            "isFromParent" : "true",
+            "selected" : "true"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Sitting",
+            "description" : "Sitting (for example on bed or chair) at the time of blood pressure measurement.",
+            "isFromParent" : "true",
+            "selected" : "true"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Reclining",
+            "description" : "Reclining at the time of blood pressure measurement.",
+            "isFromParent" : "true",
+            "selected" : "true"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Lying",
+            "description" : "Lying flat at the time of blood pressure measurement.",
+            "isFromParent" : "true",
+            "selected" : "true"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Lying with tilt to left",
+            "description" : "Lying flat with some lateral tilt, usually angled towards the left side.   Commonly required in the last trimester of pregnancy to relieve aortocaval compression.",
+            "isFromParent" : "true",
+            "selected" : "true"
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Alert & awake",
+            "description" : "Subject is fully conscious."
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Sleeping",
+            "description" : "Subject is in the natural state of bodily rest."
+          }
+        },
+        "ja" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "立位",
+            "description" : "血圧測定時に立位でいること。"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "座位",
+            "description" : "血圧測定時に（たとえば、ベッドやいすの上で）坐位でいること。"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "斜位",
+            "description" : "血圧測定時に斜位でいること。"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "臥位",
+            "description" : "血圧測定時に臥位でいること。"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "左側臥位",
+            "description" : "側臥位　通常は左側　通常は妊娠最終トリメスタで必要となる体位。一般的には妊娠の第3トリメスターで大動脈・静脈を圧排から解放するために求められる体位である。"
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "覚醒",
+            "description" : "対象は完全に意識がある。"
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "睡眠中",
+            "description" : "対象は自然な休養状態にある"
+          }
+        },
+        "de" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Stehend",
+            "description" : "Stehend zum Zeitpunkt der Blutdruckmessung."
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Sitzend",
+            "description" : "Sitzend zum Zeitpunkt der Blutdruckmessung (z.B. auf einem Bett oder Stuhl)."
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Zurückgelehnt",
+            "description" : "Patient zurückgelehnt zum Zeitpunkt der Blutdruckmessung."
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Liegend",
+            "description" : "Flach liegend zum Zeitpunkt der Blutdruckmessung."
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Nach links geneigt liegend",
+            "description" : "Flach liegend mit seitlicher Neigung, normalerweise zur linken Seite. Häufig verwendet im letzten Drittel eine Schwangerschaft, um aorto-cavale Kompression zu vermeiden."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Aufmerksam und wach",
+            "description" : "Die untersuchte Person ist bei vollem Bewusstsein."
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Schlafend",
+            "description" : "Die untersuchte Person schläft."
+          }
+        },
+        "zh-cn" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "立位",
+            "description" : "测量血压时身体处于站立体位"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "坐位",
+            "description" : "测量血压时身体处于坐位，又称为“坐姿”。"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "侧卧位",
+            "description" : "测量血压时身体处于45度角侧卧位或者说采取的是斜靠的姿势。"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "平卧位",
+            "description" : "测量血压时受检者采取的是平躺或者说平卧的姿势，又称为“仰卧位”。"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "左斜卧位",
+            "description" : "测量血压时受检者采取的是平躺或者说平卧姿势，且有向侧位一定程度的倾斜，通常是斜向左侧。在妊娠晚期，为了缓解主腔静脉压迫（aortocaval compression），常常需要采取这种体位。"
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "警觉且清醒",
+            "description" : "受检对象意识完全清楚。"
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "睡眠状态",
+            "description" : "受检对象处在全身休息的自然状态下。"
+          }
+        },
+        "nl" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Staand",
+            "description" : "Bloeddrukmeting bij staand individu"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Zittend",
+            "description" : "Bloeddrukmeting bij zittend (b.v. op bed of in stoel) individu"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Halfzittend",
+            "description" : "Halfzittend op het moment van de bloeddrukmeting"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Liggend",
+            "description" : "Platliggend op het moment van de bloeddrukmeting"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Liggend met kanteling naar linkerzijde",
+            "description" : "Platliggend met enige laterale kanteling, meestal gekanteld naar de linkerzijde. Gebruikelijk benodigd in het laatste trimester van de zwangerschap om aortacavale compressie te verlichten."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Alert en wakker",
+            "description" : "Individu is volledig bij bewustzijn"
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Slapend",
+            "description" : "Individu is in de natuurlijke slaap."
+          }
+        },
+        "ru" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Стоя",
+            "description" : "Пациент стоит во время измерения АД."
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Сидя",
+            "description" : "Пациент сидит во время измерения АД (на стуле, кровати или кресле)."
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Реклинация",
+            "description" : "Пациент лежит в вынужденной неизменной позе (на реклинации)во время измерения АД."
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Лёжа",
+            "description" : "Пациент лежит во время измерения АД."
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Лёжа с наклоном влево",
+            "description" : "Лёжа на плоской поверхности с боковым наклоном, как правило, под углом по направлению с левой стороны. Обычно требуется в последнем триместре беременности, чтобы облегчить сдавление нижней полой вены."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Пробуждение и подъём",
+            "description" : "Пациент полностью в сознании."
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Сон",
+            "description" : "Пациент находится в состоянии естественного покоя, тело расслаблено."
+          }
+        },
+        "fa" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "ایستاده",
+            "description" : "ایستاده در زمان اندازه گیری فشار خون"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "نشسته",
+            "description" : "نشسته ( به عنوان مثال روی تخت یا صندلی) در زمان اندازه گیری فشار خون"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "خمیده",
+            "description" : "خمیده در زمان اندازه گیری فشار خون"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "خوابیده",
+            "description" : "خوابیده در زمان اندازه گیری فشار خون"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "خوابیده  به چپ",
+            "description" : "خوابیدن صاف با کمی تمایل به یک سمت، معمولا به جهت چپ میل کرده و عموما در سه ماهه آخر حاملگی برای تسکین فشار آئورت نیاز به آن است"
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "هشیار و بیدار",
+            "description" : "فرد کاملا به هوش است "
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "خوابیده",
+            "description" : "فرد در حالت طبیعی استراحت بدنی است"
+          }
+        },
+        "ar-sy" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "واقف",
+            "description" : "الشخص واقف عند القيام بقياس ضغط الدم"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "جالس",
+            "description" : "الشخص جالس (مثلا على سرير أو كرسي) عند القيام بقياس ضغط الدم"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "مضطجع",
+            "description" : "الشخص مضطجع عند القيام بقياس ضغط الدم"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "مستلقٍ",
+            "description" : "الشخص مستلقٍ بشكل مستوٍ عند القيام بقياس ضغط الدم"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "مستلق و مائل لجانبه الأيسر",
+            "description" : "الشخص مستلق بشكل مستو مع ميل جانبي بزاوية تجاه جانبه الأيسر. عادة ما يُحتاج إلى هذا الوضع في الأثلوث الأخير من الحمل لتخفيف الانضغاط الأبهري الجوفي"
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "متنبه و يقظ",
+            "description" : "الشخص واعٍ بشكل كامل"
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "نائم",
+            "description" : "الشخص في الحالة الطبيعية الخاصة بالراحة الجسدية"
+          }
+        },
+        "es-ar" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "De pie",
+            "description" : "De pie al momento de la medición de la tensión arterial."
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Sentado",
+            "description" : "Sentado (en la cama o en una silla) durante el registro de la presión arterial "
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Reclinado",
+            "description" : "Reclinado (semisentado) durante el registro de la presión arterial"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Acostado",
+            "description" : "Acostado horizontal durante la medición de la presión arterial"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Acostado e inclinado levemente sobre su costado izquierdo",
+            "description" : "Acostado horizontal e inclinado levemente sobre su costado izquierdo. Comúnmente se requiere durante el último trimestre del embarazo para aliviar la compresión aortocava."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Alerta y despierto",
+            "description" : "El sujeto esta plenamente consciente"
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Dormido",
+            "description" : "El sujeto esta en un estado natural de sueño corporal"
+          }
+        },
+        "pt-br" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Em pé",
+            "description" : "Em pé na hora da medida da pressão arterial."
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Sentado",
+            "description" : "Sentado (por exemplo na cama ou em uma cadeira) na hora da medida da pressão arterial."
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Reclinado",
+            "description" : "Reclinado na hora da medida da pressão arterial."
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Deitado",
+            "description" : "Deitado sem reclinação hora da medida da pressão arterial."
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Deitado com inclinação para esquerda",
+            "description" : "Deitado sem reclinação com alguma inclinação lateral, usualmente com angulação para o lado esquerdo. Comumente requerido no último trimestre da gravidez para aliviar a compressão aortocaval."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Alerta e acordado",
+            "description" : "Sujeito está totalmente consciente."
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Dormindo",
+            "description" : "Sujeito está no estado natural de descanso corporal."
+          }
+        },
+        "ko" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "선 자세",
+            "description" : "혈압측정 시에 서있는 자세."
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "앉은 자세",
+            "description" : "혈압 측정시에 앉은 자세(침대 또는 의자)."
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "비스듬한 자세",
+            "description" : "혈압 측정시에 비스듬한 자세(reclining)."
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "누운 자세",
+            "description" : "혈압 측정시에 바로 누운 자세."
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "왼쪽으로 누운 자세",
+            "description" : "보통 왼쪽으로 기울린, 옆쪽으로 기울여 누운 자세. 보통 임신 3기에 동정맥압력을 완화하기위해 필요함."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "각성과 기상 상태",
+            "description" : "대상은 완전한 의식이 있다."
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "수면 상태",
+            "description" : "대상은 신체적으로 자연적인 휴식 상태에 있다."
+          }
+        },
+        "es" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Parado",
+            "description" : "El paciente está parado en el momento de la medida"
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Sentado",
+            "description" : "El paciente está sentado en el momento de la medida"
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Reclinado",
+            "description" : "El paciente está reclinado en el momento de la medida"
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Acostado",
+            "description" : "El paciente está acostado en el momento de la meidda"
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Acostado inclinado hacia la izquierda",
+            "description" : "Acostado con inclinación lateral hacia la izquierda"
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "alerta y despierto",
+            "description" : "El paciente está totalmente conciente"
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Durmiendo",
+            "description" : "El paciente está durmiendo"
+          }
+        },
+        "nb" : {
+          "at0.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1000",
+            "text" : "Stående",
+            "description" : "Stående ved tidspunktet for målingen."
+          },
+          "at0.0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1001",
+            "text" : "Sittende",
+            "description" : "Sittende (for eksempel på en stol eller på en seng med føttene på gulvet) på tidspunkt for blodtrykksmålingen."
+          },
+          "at0.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1002",
+            "text" : "Tilbakelent",
+            "description" : "Sittende tilbakelent ca 45º og med beina hevet til samme høyde som hoften på tidspunkt for blodtrykksmålingen."
+          },
+          "at0.0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1003",
+            "text" : "Liggende",
+            "description" : "Liggende flatt på tidspunkt for blodtrykksmålingen."
+          },
+          "at0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1014",
+            "text" : "Liggende lent mot venstre",
+            "description" : "Liggende flatt med noe lateral tilt, vanligvis vinklet mot venstre side. Vanligvis nødvendig i siste trimester av svangerskapet for å avlaste aortocaval komprimering."
+          },
+          "at0.0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1044",
+            "text" : "Våken",
+            "description" : "Individet er ved full bevissthet."
+          },
+          "at0.0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at1045",
+            "text" : "Sovende",
+            "description" : "Individet er i den naturlige tilstand av kroppslig hvile."
+          }
+        }
+      },
+      "termBindings" : {
+        "SNOMED-CT" : {
+          "at0000.1.1" : "term:SNOMED-CT(2003)::163020007"
+        },
+        "openehr" : { }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "6c619135-74b0-428b-8b49-f0ad4f26e881",
+    "rmName" : "openehr",
+    "rmRelease" : "1.0.3",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sebastian Garde, Jasmin Buck",
+        "organisation" : "Ocean Informatics, University of Heidelberg"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ru"
+      },
+      "author" : {
+        "name" : "Igor Lizunov",
+        "email" : "i.lizunov@infinnity.ru"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Heather Leslie (from a Norwegian archetype)",
+        "organisation" : "Ocean Informatics, Australia and Nasjonal IKT, Norway",
+        "email" : "heather.leslie@oceaninformatics.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ko"
+      },
+      "author" : {
+        "name" : "Seung-Jong Yu",
+        "organisation" : "NOUSCO Co.,Ltd.",
+        "email" : "seungjong.yu@gmail.com"
+      },
+      "accreditation" : "Certified Board of Family Medicine in South Korea",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Domingo Liotta",
+        "organisation" : "Universidad de Morón",
+        "email" : "domingo_liotta@hotmail.com"
+      },
+      "accreditation" : "Universidad de Morón",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Jussara Rözsch",
+        "organisation" : "OpenEHR  Foundation",
+        "email" : "jussara.macedo@gmail.com"
+      },
+      "accreditation" : "Medical Doctor, Psychiarist, Clinical Modeller, openEHR Diretor, ehealth infostructuture WG ccoordinator- brazilian  ehealth program",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ja"
+      },
+      "author" : {
+        "name" : "Shinji Kobayashi",
+        "organisation" : "Kyoto University",
+        "email" : "skoba@moss.gr.jp"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fa"
+      },
+      "author" : {
+        "name" : "Shahla Foozonkhah",
+        "organisation" : "Ocean Informatics",
+        "email" : "shahla.foozonkhah@oceaninformatics.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Chunlan Ma; Lin Zhang",
+        "organisation" : "Ocean Informatics; BIPH",
+        "email" : "chunlan.ma@oceaninformatics.com; linforest@163.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Pablo Pazos",
+        "organisation" : "CaboLabs"
+      },
+      "accreditation" : "Computer Engineer",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Marja Buur",
+        "organisation" : "M.C.A.",
+        "email" : "m.buur-krom@mca.nl"
+      },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ko"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es-ar"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ar-sy"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
